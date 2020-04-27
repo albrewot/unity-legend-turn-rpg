@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LogoDoors
+  m_Controller: {fileID: 9100000, guid: b68071da02e846647991bb47abeb4cbb, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 68c071cf2d1a43c4289f9fcb3919a9f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 01fa31253a8264f46b3b0f0a7319e0f8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 365e51103024b1e47b59ea5c9db4b23c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e0391af682bf15b429db0c14ebc8d21c, type: 2}
