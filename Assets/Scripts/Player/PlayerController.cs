@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState {
+    walk,
+    interact,
+    attack
+}
+
 public class PlayerController : MonoBehaviour {
     //Attributes
     //Serialized
@@ -16,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     public static PlayerController instance;
     private Vector3 minLimit;
     private Vector3 maxLimit;
+    public PlayerState currentState;
     
 
     //Methods
@@ -28,13 +35,20 @@ public class PlayerController : MonoBehaviour {
 
     }
     public void AltMovePlayer() {
-        MovementInput();
+        if(currentState == PlayerState.walk) {
 
-        playerRb.velocity = new Vector2(movement.x, movement.y).normalized * movementSpeed;
+            MovementInput();
 
-        clampLimits();
+            playerRb.velocity = new Vector2(movement.x, movement.y).normalized * movementSpeed;
 
-        UpdateAnimationParams();
+            clampLimits();
+
+            UpdateAnimationParams();
+        }
+        else {
+            playerRb.velocity = Vector2.zero;
+        }
+
     }
 
     public void clampLimits() {
@@ -71,7 +85,9 @@ public class PlayerController : MonoBehaviour {
         if (instance == null) {
             instance = this;
         } else {
-            Destroy(gameObject);
+            if(instance != this) {
+                Destroy(gameObject);
+            }
         }
         DontDestroyOnLoad(gameObject);
     }
@@ -80,6 +96,7 @@ public class PlayerController : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         PlayerInstance();
+        currentState = PlayerState.walk;
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }

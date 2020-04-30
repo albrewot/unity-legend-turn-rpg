@@ -48,7 +48,7 @@ public class CameraMovement : MonoBehaviour {
 
     public void FindPlayer() {
         if(targetPlayer == null) {
-            targetPlayer = PlayerController.instance.transform;
+            targetPlayer = FindObjectOfType<PlayerController>().transform;
         }
     }
 
