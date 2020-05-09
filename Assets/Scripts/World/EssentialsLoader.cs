@@ -7,6 +7,7 @@ public class EssentialsLoader : MonoBehaviour
     //Attributes
     //Serialized Fields
     [SerializeField] public PlayerController player;
+    [SerializeField] public GameManager gameMnger;
 
     //Not Serialized Fields
 
@@ -21,6 +22,12 @@ public class EssentialsLoader : MonoBehaviour
         if(PlayerController.instance == null) {
             PlayerController playerClone = Instantiate(player).GetComponent<PlayerController>();
             PlayerController.instance = playerClone;
+        }
+
+        if(GameManager.instance == null) {
+            //GameManager gameMngerClone = Instantiate(gameMnger).GetComponent<GameManager>();
+            //GameManager.instance = gameMngerClone;
+            Instantiate(gameMnger);
         }
     }
 

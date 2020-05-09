@@ -43,8 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0047c7891d0835f4f8fd2b948164e527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 751486571624230688, guid: 586fe513f0a20d04ba88a8fccf30b164,
+    type: 3}
+  speakerBox: {fileID: 0}
   dialogueText: {fileID: 0}
+  interactBox: {fileID: 2419398367936680064, guid: 40c5a8fc998327447ab4ab5cb85aac0a,
+    type: 3}
+  speakerText: {fileID: 0}
   dialogueLines: []
+  speakerName: 
+  npcName: 
   currentLine: 0
   typingSpeed: 0.02

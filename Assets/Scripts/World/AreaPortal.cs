@@ -24,10 +24,10 @@ public class AreaPortal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             //StartCoroutine(LoadScene());
-            Debug.Log("Hola");
             sceneLoader.LoadScene(sceneToLoad);
             PlayerController.instance.areaTransitionName = areaTransitionName;
-            PlayerController.instance.currentState = PlayerState.interact;
+            PlayerController.instance.SetPlayerIdleAnimation();
+            PlayerController.instance.currentState = PlayerState.transfer;
         }
     }
 }

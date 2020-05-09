@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour {
 
     //Methods
     public void OpenDialogBox() {
+        PlayerController.instance.currentState = PlayerState.interact;
         ShowDialogLine();
     }
 
@@ -52,6 +53,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void CloseDialogBox() {
+        PlayerController.instance.currentState = PlayerState.walk;
         dialogueBox.SetActive(false);
         interactBox.SetActive(true);
     }

@@ -151,6 +151,9 @@ MonoBehaviour:
   dialogueLines:
   - Mi papa tenia un burro
   - Un burro peligroso
+  interactBox: {fileID: 0}
+  interactText: {fileID: 0}
   npcName: 
+  interactDialog: Press F to read sign
   playerInRange: 0
   isPerson: 0

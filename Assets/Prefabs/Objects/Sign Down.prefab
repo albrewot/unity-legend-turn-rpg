@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 369606547
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300224, guid: 9589500635eeaef4fa211db6fa452780, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -151,6 +151,9 @@ MonoBehaviour:
   dialogueLines:
   - Mi papa tenia un burro
   - Un burro peligroso
+  interactBox: {fileID: 0}
+  interactText: {fileID: 0}
   npcName: 
+  interactDialog: Press F to read Sign
   playerInRange: 0
   isPerson: 0

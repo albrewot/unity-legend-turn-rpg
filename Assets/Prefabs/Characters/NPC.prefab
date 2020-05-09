@@ -172,12 +172,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - ' La vida'
-  - es una lenteja
-  - o la tomas o la dejas
+  - Uno uno
+  - Dos dos
   interactBox: {fileID: 0}
   interactText: {fileID: 0}
-  npcName: 
-  interactDialog: 
+  npcName: Jose
+  interactDialog: Press F to interact
   playerInRange: 0
   isPerson: 1

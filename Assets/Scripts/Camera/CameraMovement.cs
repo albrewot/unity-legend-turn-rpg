@@ -40,9 +40,6 @@ public class CameraMovement : MonoBehaviour {
     }
 
     public void SetPlayerBoundaries() {
-        Debug.Log("Max " + maxBoundary);
-        Debug.Log("Min " + minBoundary);
-        Debug.Log("OK");
         PlayerController.instance.SetBoundaries(sceneMap.localBounds.min, sceneMap.localBounds.max);
     }
 

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public enum PlayerState {
     walk,
+    attack,
     interact,
-    attack
+    menu,
+    transfer
 }
 
 public class PlayerController : MonoBehaviour {
@@ -18,7 +20,7 @@ public class PlayerController : MonoBehaviour {
     //Not-Serialized
     private Vector3 movement;
     private Rigidbody2D playerRb;
-    private Animator animator;
+    public Animator animator;
     public static PlayerController instance;
     private Vector3 minLimit;
     private Vector3 maxLimit;
@@ -61,8 +63,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void SetBoundaries(Vector3 minBoundary, Vector3 maxBoundary) {
-        Debug.Log("Player Min " + minBoundary);
-        Debug.Log("Player Max " + maxBoundary);
         minLimit = minBoundary + limitOffset;
         maxLimit = maxBoundary - limitOffset;
     }
@@ -74,6 +74,10 @@ public class PlayerController : MonoBehaviour {
             animator.SetFloat("Vertical", playerRb.velocity.y);
         }
         animator.SetFloat("WalkSpeed", playerRb.velocity.sqrMagnitude);
+    }
+
+    public void SetPlayerIdleAnimation() {
+        animator.SetFloat("WalkSpeed", 0);
     }
 
     private void MovementInput() {
