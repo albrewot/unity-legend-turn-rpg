@@ -50,6 +50,55 @@ MonoBehaviour:
   - {fileID: 120379670}
   - {fileID: 2990600325924404029}
   - {fileID: 2990600326303559970}
+  itemsHeld:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - HP Potion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - MP Potion
+  - 
+  - 
+  - 
+  - Leather Armor
+  - 
+  - Iron Armor
+  - 
+  - Iron Sword
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  numberOfItems: 000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000300000000000000000000000000000002000000000000000100000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  referencedItems:
+  - {fileID: 6193368638397781679, guid: b433b90d059d4864cb39aae206e535a4, type: 3}
+  - {fileID: 7986981722896854185, guid: 773e790507b20e04f9cf8aba1bdc132d, type: 3}
+  - {fileID: 8185653565202724111, guid: 07580a7e2e547a547818008d33c35019, type: 3}
+  - {fileID: 2272760435293378455, guid: abf0fd0c3cb5e9b4b91da1f1bfbe03b6, type: 3}
+  - {fileID: 9112789848922447575, guid: 565668ea14b5c9647bd445da66b4a1cd, type: 3}
+  - {fileID: 3516853996128816710, guid: 1f033686e451d164a9fe036dffd601f1, type: 3}
 --- !u!1001 &1412416405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
         type: 3}
       propertyPath: playerLvl
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
         type: 3}
@@ -73,6 +122,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3713795202796432, guid: fb8cc55af4b7a034584793949fd90500,
         type: 3}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: currentHP
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: currentMP
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: maxMP
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: strength
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedWeapon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedArmor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2990600325184616617, guid: ffed6e797f8aa374ca3712038c64acf0,
         type: 3}
       propertyPath: m_Name
@@ -176,6 +255,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -7426982183413531617, guid: fb8cc55af4b7a034584793949fd90500,
         type: 3}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedWeapon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedArmor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2990600325184616617, guid: ffed6e797f8aa374ca3712038c64acf0,
         type: 3}
       propertyPath: m_Name
@@ -268,6 +357,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2704255683633563467}
     m_Modifications:
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: currentHP
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: currentMP
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: maxMP
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: strength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedWeapon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990600325184616616, guid: ffed6e797f8aa374ca3712038c64acf0,
+        type: 3}
+      propertyPath: equippedArmor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2990600325184616617, guid: ffed6e797f8aa374ca3712038c64acf0,
         type: 3}
       propertyPath: m_Name

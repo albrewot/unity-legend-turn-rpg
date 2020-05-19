@@ -12,7 +12,7 @@ public class AreaEntrance : MonoBehaviour
         Debug.Log(areaEntranceName);
         if (areaEntranceName == PlayerController.instance.areaTransitionName) {
             PlayerController.instance.transform.position = transform.position;
-        } else if(PlayerController.instance.areaTransitionName != null){
+        } else if (PlayerController.instance.areaTransitionName == null || PlayerController.instance.areaTransitionName == "") {
             PlayerController.instance.transform.position = transform.position;
         }
     }

@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4668576077393179365}
-  - component: {fileID: 4668576077393179366}
   - component: {fileID: 4668576077393179364}
+  - component: {fileID: 1639834385}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: Area Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,23 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4668576077393179366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4668576077393179367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 832f7efd8fdfa9a48a6cd4bb887169b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: Countryside
-  areaTransitionName: A1-1
-  entrance: {fileID: 4668576078030070333}
-  transition: {fileID: 0}
-  transitionTime: 1
 --- !u!61 &4668576077393179364
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76,6 +59,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.41, y: 3.85}
   m_EdgeRadius: 0
+--- !u!114 &1639834385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4668576077393179367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3956194aef8346b499d0754517c1a431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
+  sceneToLoad: Countryside
+  entrance: {fileID: 4668576078030070333}
+  areaTransitionName: A1-1
 --- !u!1 &4668576078030070335
 GameObject:
   m_ObjectHideFlags: 0
