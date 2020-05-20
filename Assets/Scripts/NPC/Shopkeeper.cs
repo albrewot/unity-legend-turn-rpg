@@ -8,10 +8,14 @@ public class Shopkeeper : MonoBehaviour
     [SerializeField] public GameObject interactBox;
     [SerializeField] public TextMeshProUGUI interactText;
     [SerializeField] public string interactDialog;
+    [SerializeField] public float sellPercentage;
+    [SerializeField] public string[] itemsForSale = new string[40];
 
     //Methods
     public void OpenShop() {
         if (Input.GetKeyDown(KeyCode.F) && !Shop.instance.shopMenu.gameObject.activeInHierarchy) {
+            Shop.instance.itemsForSale = itemsForSale;
+            Shop.instance.sellPercentage = sellPercentage;
             Shop.instance.OpenShop();
         }
     }

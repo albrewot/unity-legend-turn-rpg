@@ -172,7 +172,10 @@ public class GameMenu : MonoBehaviour {
 
     public void DiscardItem() {
         if(activeItem != null) {
-            GameManager.instance.RemoveItem(activeItem.itemName);
+           int isInInventory = GameManager.instance.RemoveItem(activeItem.itemName);
+            if(isInInventory == 0) {
+                SelectItem(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[0]));
+            }
         }
     }
 

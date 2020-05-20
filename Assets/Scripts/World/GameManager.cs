@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         GameMenu.instance.ShowItems();
     }
 
-    public void RemoveItem(string itemToRemove) {
+    public int RemoveItem(string itemToRemove) {
         int itemPosition = 0;
         bool foundItem = false;
 
@@ -97,11 +97,15 @@ public class GameManager : MonoBehaviour
             numberOfItems[itemPosition]--;
             if(numberOfItems[itemPosition] <= 0) {
                 itemsHeld[itemPosition] = "";
+                GameMenu.instance.ShowItems();
+                return 0;
             }
 
             GameMenu.instance.ShowItems();
+            return 1;
         } else {
             Debug.LogError(itemToRemove + " is not there");
+            return 0;
         }
     }
 

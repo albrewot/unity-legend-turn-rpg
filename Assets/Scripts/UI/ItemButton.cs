@@ -12,9 +12,24 @@ public class ItemButton : MonoBehaviour
 
     //Methods
     public void Press() {
-        if(GameManager.instance.itemsHeld[buttonValue] != "") {
-            GameMenu.instance.SelectItem(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[buttonValue]));
+
+        if (GameMenu.instance.menu.activeInHierarchy) {
+            if(GameManager.instance.itemsHeld[buttonValue] != "") {
+                GameMenu.instance.SelectItem(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[buttonValue]));
+            }
         }
+
+        if (Shop.instance.shopMenu.activeInHierarchy) {
+            for(int i = 0; i < Shop.instance.windows.Length; i++) {
+                if (Shop.instance.windows[i].activeInHierarchy) {
+                    switch (i) {
+                        case 0: Shop.instance.SelectBuyItem(GameManager.instance.GetItemDetails(Shop.instance.itemsForSale[buttonValue])); break;
+                        case 1: Shop.instance.SelectSellItem(GameManager.instance.GetItemDetails(GameManager.instance.itemsHeld[buttonValue])); break;
+                    }
+                }
+            }
+        }
+
     }
 
     // Start is called before the first frame update

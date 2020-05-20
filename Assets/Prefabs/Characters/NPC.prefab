@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5982943395496351368}
   - component: {fileID: 5982943395496351369}
   - component: {fileID: 5982943395496351370}
-  - component: {fileID: 1186674947671242680}
+  - component: {fileID: 7623907935914794921}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369606547
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1090673805
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2757298984738394219, guid: 363102257bb914a4eae98d23f34d3eec,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00820303, y: -0.37323904}
+  m_Offset: {x: 0.0024437904, y: -0.4323187}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6226597, y: 0.31602192}
+  m_Size: {x: 0.8714943, y: 0.38378716}
   m_EdgeRadius: 0
 --- !u!61 &5982943395496351369
 BoxCollider2D:
@@ -125,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.41015196}
+  m_Offset: {x: -0.0027093887, y: -0.52636194}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.8828039}
+  m_Size: {x: 1.2691622, y: 2.3932867}
   m_EdgeRadius: 0
 --- !u!50 &5982943395496351370
 Rigidbody2D:
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5982943395496351371}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1186674947671242680
+--- !u!114 &7623907935914794921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,11 +172,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Uno uno
-  - Dos dos
-  interactBox: {fileID: 0}
+  - 'NPC: Hola'
+  - 'Player: Como estas?'
+  - 'NPC: Yo Bien'
+  interactBox: {fileID: 2419398367936680064, guid: 40c5a8fc998327447ab4ab5cb85aac0a,
+    type: 3}
   interactText: {fileID: 0}
-  npcName: Jose
-  interactDialog: Press F to interact
+  npcName: Pepo
+  interactDialog: Press F to Talk
   playerInRange: 0
   isPerson: 1
