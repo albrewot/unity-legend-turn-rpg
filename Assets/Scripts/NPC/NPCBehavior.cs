@@ -13,13 +13,26 @@ public class NPCBehavior : MonoBehaviour
     [SerializeField] public string interactDialog;
     [SerializeField] public bool playerInRange;
     [SerializeField] public bool isPerson = true;
+
+    [Header("Quest Behaviour")]
+    [SerializeField] public bool shouldActivateQuest;
+    [SerializeField] public string questToMark;
+    [SerializeField] public bool markComplete;
     
 
     //Methods
     public void showDialogueBox() {
         if(playerInRange && Input.GetKeyDown(KeyCode.F)) {
             interactBox.SetActive(false);
+            activateQuest();
             DialogueManager.instance.OpenDialogBox();
+        }
+    }
+
+    public void activateQuest() {
+        if (shouldActivateQuest) {
+            Debug.Log("Should activate Quest");
+            DialogueManager.instance.ShouldActivateQuestAtEnd(questToMark, markComplete);
         }
     }
 

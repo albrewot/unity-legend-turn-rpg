@@ -16,6 +16,10 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField] public int currentLine;
     [SerializeField] public float typingSpeed;
 
+    [SerializeField] private string questToMark;
+    [SerializeField] private bool markQuestComplete;
+    [SerializeField] private bool shouldMarkQuest;
+
     //Methods
     public void OpenDialogBox() {
         PlayerController.instance.currentState = PlayerState.interact;
@@ -25,6 +29,7 @@ public class DialogueManager : MonoBehaviour {
     public void NextLine() {
         currentLine++;
         if (currentLine >= dialogueLines.Length) {
+            MarkDialogueQuest();
             CloseDialogBox();
         }
         else {
@@ -40,8 +45,7 @@ public class DialogueManager : MonoBehaviour {
         }
         else if (dialogueLines.Length <= 0) {
             CloseDialogBox();
-        }
-        else {
+        } else {
             NextLine();
         }
     }
@@ -80,6 +84,26 @@ public class DialogueManager : MonoBehaviour {
             dialogueLines[currentLine] = dialogueLines[currentLine].Replace("NPC:","");
         }
     }
+
+    public void ShouldActivateQuestAtEnd(string questName, bool markComplete) {
+        questToMark = questName;
+        markQuestComplete = markComplete;
+        shouldMarkQuest = true;
+    }
+
+    public void MarkDialogueQuest() {
+        Debug.Log("Quest Activated");
+        if (shouldMarkQuest) {
+            shouldMarkQuest = false;
+            if (markQuestComplete) {
+                QuestManager.instance.MarkQuestComplete(questToMark);
+            } else {
+                QuestManager.instance.MarkQuestComplete(questToMark);
+            }
+        }
+    }
+
+
 
     //Coroutines
     IEnumerator typeLinesCo() {

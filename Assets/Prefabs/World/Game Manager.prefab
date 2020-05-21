@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2704255683633563467}
   - component: {fileID: 2704255683633563464}
+  - component: {fileID: 5200468237881738735}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -100,6 +101,25 @@ MonoBehaviour:
   - {fileID: 9112789848922447575, guid: 565668ea14b5c9647bd445da66b4a1cd, type: 3}
   - {fileID: 3516853996128816710, guid: 1f033686e451d164a9fe036dffd601f1, type: 3}
   currentGold: 100
+--- !u!114 &5200468237881738735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2704255683633563465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9652880dc6d6d4d429e4caeddffaf1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questMarkerNames:
+  - 
+  - Fight rats
+  - Save the world
+  - Catch a donkey
+  - Give me gold
+  questMarkerComplete: 
 --- !u!1001 &1412416405
 PrefabInstance:
   m_ObjectHideFlags: 0
