@@ -7,7 +7,8 @@ public enum PlayerState {
     attack,
     interact,
     menu,
-    transfer
+    transfer,
+    load
 }
 
 public class PlayerController : MonoBehaviour {

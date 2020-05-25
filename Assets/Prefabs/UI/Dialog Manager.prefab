@@ -55,3 +55,6 @@ MonoBehaviour:
   npcName: 
   currentLine: 0
   typingSpeed: 0.02
+  questToMark: 
+  markQuestComplete: 0
+  shouldMarkQuest: 0

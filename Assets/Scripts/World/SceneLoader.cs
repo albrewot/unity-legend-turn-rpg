@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     //Attributes
-
+    public static SceneLoader instance;
     [SerializeField] public Animator transition;
     [SerializeField] public float transitionTime = 1f;
 
@@ -37,13 +37,17 @@ public class SceneLoader : MonoBehaviour
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneToLoad);
-        PlayerController.instance.currentState = PlayerState.walk;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //if (instance == null) {
+        //    instance = this;
+        //} else {
+        //    Destroy(gameObject);
+        //}
+        instance = this;
     }
 
     // Update is called once per frame

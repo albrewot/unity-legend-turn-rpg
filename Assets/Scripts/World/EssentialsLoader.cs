@@ -8,6 +8,8 @@ public class EssentialsLoader : MonoBehaviour
     //Serialized Fields
     [SerializeField] public PlayerController player;
     [SerializeField] public GameManager gameMnger;
+    [SerializeField] public AudioManager audioManager;
+    [SerializeField] public SceneLoader sceneLoader;
 
     //Not Serialized Fields
 
@@ -28,6 +30,14 @@ public class EssentialsLoader : MonoBehaviour
             //GameManager gameMngerClone = Instantiate(gameMnger).GetComponent<GameManager>();
             //GameManager.instance = gameMngerClone;
             Instantiate(gameMnger);
+        }
+
+        if(AudioManager.instance == null) {
+            Instantiate(audioManager);
+        }
+
+        if(SceneLoader.instance == null) {
+            Instantiate(sceneLoader);
         }
     }
 

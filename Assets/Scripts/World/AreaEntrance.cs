@@ -10,10 +10,12 @@ public class AreaEntrance : MonoBehaviour
     void Start()
     {
         Debug.Log(areaEntranceName);
-        if (areaEntranceName == PlayerController.instance.areaTransitionName) {
+        if (areaEntranceName == PlayerController.instance.areaTransitionName && PlayerController.instance.currentState == PlayerState.transfer) {
             PlayerController.instance.transform.position = transform.position;
-        } else if (PlayerController.instance.areaTransitionName == null || PlayerController.instance.areaTransitionName == "") {
+            PlayerController.instance.currentState = PlayerState.walk;
+        } else if ((PlayerController.instance.areaTransitionName == null || PlayerController.instance.areaTransitionName == "") && PlayerController.instance.currentState == PlayerState.transfer) {
             PlayerController.instance.transform.position = transform.position;
+            PlayerController.instance.currentState = PlayerState.walk;
         }
     }
 

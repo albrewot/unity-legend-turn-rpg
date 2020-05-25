@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AreaPortal : MonoBehaviour
 {
-    [SerializeField] public SceneLoader sceneLoader;
     [SerializeField] public string sceneToLoad;
     [SerializeField] public AreaEntrance entrance;
     [SerializeField] public string areaTransitionName;
@@ -24,7 +23,7 @@ public class AreaPortal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             //StartCoroutine(LoadScene());
-            sceneLoader.LoadScene(sceneToLoad);
+            SceneLoader.instance.LoadScene(sceneToLoad);
             PlayerController.instance.areaTransitionName = areaTransitionName;
             PlayerController.instance.SetPlayerIdleAnimation();
             PlayerController.instance.currentState = PlayerState.transfer;

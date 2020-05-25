@@ -149,11 +149,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Mi papa tenia un burro
-  - Un burro peligroso
+  - mi nombre es peligro
   interactBox: {fileID: 0}
   interactText: {fileID: 0}
   npcName: 
   interactDialog: Press F to read Sign
   playerInRange: 0
   isPerson: 0
+  shouldActivateQuest: 0
+  questToMark: 
+  markComplete: 0

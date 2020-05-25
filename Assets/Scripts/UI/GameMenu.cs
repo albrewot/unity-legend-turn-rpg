@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour {
     public static GameMenu instance;
@@ -41,6 +42,7 @@ public class GameMenu : MonoBehaviour {
             if (!menu.activeInHierarchy) {
                 Time.timeScale = 0;
                 menu.SetActive(true);
+                AudioManager.instance.PlaySFX(5);
                 UpdateStats();
                 PlayerController.instance.currentState = PlayerState.menu;
             } else {
@@ -183,6 +185,24 @@ public class GameMenu : MonoBehaviour {
         Debug.Log("Triggered Use Item Func");
         activeItem.Use(selectedCharacter);
         CloseCharacterChoice();
+    }
+
+    public void SaveGame() {
+        GameManager.instance.SaveData();
+        QuestManager.instance.SaveQuestData();
+    }
+
+    public void PlayButtonSFX() {
+        AudioManager.instance.PlaySFX(4);
+    }
+
+    public void QuitGame() {
+        CloseMenu();
+        Destroy(GameManager.instance.gameObject);
+        Destroy(AudioManager.instance.gameObject);
+        Destroy(PlayerController.instance.gameObject);
+        Destroy(gameObject);
+        SceneManager.LoadScene(0);
     }
 
     // Start is called before the first frame update

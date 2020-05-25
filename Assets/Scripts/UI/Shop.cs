@@ -29,7 +29,6 @@ public class Shop : MonoBehaviour {
 
     public void CloseShop() {
         shopMenu.SetActive(false);
-        ToggleWindow(0);
         PlayerController.instance.currentState = PlayerState.walk;
     }
 

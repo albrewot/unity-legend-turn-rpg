@@ -16,6 +16,13 @@ public class CameraMovement : MonoBehaviour {
     private float halfHeight;
     private float halfWidth;
 
+    //Audio Attributes
+    [SerializeField] public int bgmToPlay;
+
+    //Private Audio Attributes
+    private bool musicStarted;
+
+
     //Methods
     public void MakeCameraFollowPlayer() {
         if (transform.position != targetPlayer.position) {
@@ -49,6 +56,16 @@ public class CameraMovement : MonoBehaviour {
         }
     }
 
+    public void PlayBGM() { 
+
+        if(!musicStarted){
+            musicStarted = true;
+            Debug.Log(AudioManager.instance);
+            AudioManager.instance.PlayBGM(bgmToPlay);
+        }
+
+    }
+
     // Start is called before the first frame update
     void Start() {
         FindPlayer();
@@ -59,5 +76,9 @@ public class CameraMovement : MonoBehaviour {
     void FixedUpdate() {
         FindPlayer();
         MakeCameraFollowPlayer();
+    }
+
+    private void LateUpdate() {
+        PlayBGM();
     }
 }

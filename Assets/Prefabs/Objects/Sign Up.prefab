@@ -157,3 +157,6 @@ MonoBehaviour:
   interactDialog: Press F to read sign
   playerInRange: 0
   isPerson: 0
+  shouldActivateQuest: 0
+  questToMark: 
+  markComplete: 0
